@@ -1,7 +1,7 @@
 import { Outlet, useRoutes } from 'react-router-dom';
 import type { RouteObject } from 'react-router-dom';
 import Navbar from './components/Navbar';
-import Home from './pages/Home';
+import Home from './pages/PortfolioPage';
 import Investigaciones from './pages/Investigaciones';
 import Publicadas from './pages/Publicadas';
 import NotFound from './pages/NotFound';
