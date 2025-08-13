@@ -24,7 +24,7 @@ const PortfolioPage: React.FC = () => {
             <div className="col-12 col-lg-7">
               <p className="brand">Folio<span className="brand-x">x</span></p>
               <h1 className="display-4 fw-bold mb-1">
-                Wilson <span className="txt-gradient">Hernández</span>
+                Guillermo <span className="txt-gradient">Gomez</span>
               </h1>
               <p className="lead text-secondary mb-4">
                 Web Developer • React • TypeScript • Bootstrap
@@ -53,7 +53,7 @@ const PortfolioPage: React.FC = () => {
       {/* FOOTER */}
       <footer className="container py-5" id="contacto">
         <div className="text-center text-secondary small">
-          © {new Date().getFullYear()} Wilson Hernández — Hecho con React + TS
+          © {new Date().getFullYear()} Guillermo Gomez — Hecho con React + TS
         </div>
       </footer>
     </>

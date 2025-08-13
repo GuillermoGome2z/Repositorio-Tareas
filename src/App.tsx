@@ -1,33 +1,19 @@
-import { Outlet, useRoutes } from 'react-router-dom';
-import type { RouteObject } from 'react-router-dom';
-import Navbar from './components/Navbar';
-import Home from './pages/PortfolioPage';
-import Investigaciones from './pages/Investigaciones';
-import Publicadas from './pages/Publicadas';
+// src/App.tsx
+import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import PortfolioPage from './pages/PortfolioPage';
 import NotFound from './pages/NotFound';
 
-function Layout() {
+const App: React.FC = () => {
   return (
-    <>
-      <Navbar />
-      <Outlet />
-    </>
+    <BrowserRouter>
+      {/* Si tienes <Navbar />, colócalo aquí */}
+      <Routes>
+        <Route path="/" element={<PortfolioPage />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </BrowserRouter>
   );
-}
+};
 
-const routes: RouteObject[] = [
-  {
-    path: '/',
-    element: <Layout />,
-    children: [
-      { index: true, element: <Home /> },
-      { path: 'investigaciones', element: <Investigaciones /> },
-      { path: 'publicadas', element: <Publicadas /> },
-      { path: '*', element: <NotFound /> }
-    ]
-  }
-];
-
-export default function App() {
-  return useRoutes(routes);
-}
+export default App;
