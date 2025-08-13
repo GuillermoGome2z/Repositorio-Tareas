@@ -1,42 +1,37 @@
-export type TaskType = 'investigacion' | 'publicada';
+export type TaskType = 'investigacion' | 'proyecto';
 
-export interface TaskBase {
+export interface Task {
   id: string;
-  titulo: string;
-  curso?: string;
-  fecha?: string;      // ISO o texto libre
+  title: string;
+  description?: string;
+  type: TaskType;
+  url?: string;       // para Netlify
   tags?: string[];
 }
 
-export interface Investigacion extends TaskBase {
-  tipo: 'investigacion';
-  contenido: string;   // texto plano
-}
-
-export interface Publicada extends TaskBase {
-  tipo: 'publicada';
-  descripcion?: string;
-  url: string;         // Netlify u otro
-}
-
-export type Task = Investigacion | Publicada;
-
-export const tareas: Task[] = [
+export const tasks: Task[] = [
   {
-    id: 'inv-01',
-    tipo: 'investigacion',
-    titulo: 'Modelo OSI vs TCP/IP',
-    fecha: '2025-08-09',
-    tags: ['Redes'],
-    contenido:
-      'Resumen comparativo de capas, funciones, encabezados y casos de uso...'
+    id: 'glosario-01',
+    title: 'Glosario de términos (Sistemas)',
+    description:
+      'Definiciones clave: algoritmo, compilador, framework, API, endpoint, ORM, REST, CRUD, etc.',
+    type: 'investigacion'
   },
   {
-    id: 'pub-01',
-    tipo: 'publicada',
-    titulo: 'Landing Portafolio Personal',
-    descripcion: 'Sitio React con Bootstrap',
-    url: 'https://https://cv-guillermogomez.netlify.app/',
-    tags: ['Frontend']
+    id: 'form-react-01',
+    title: 'Formulario en React + TS',
+    description: 'Formulario con validaciones y exportación a Excel.',
+    type: 'proyecto',
+    url: 'https://tusitio1.netlify.app',
+    tags: ['React', 'TypeScript', 'Bootstrap']
+  },
+  {
+    id: 'cv-portfolio-01',
+    title: 'CV/Portfolio (dark theme)',
+    description: 'Hoja de vida con tarjetas y secciones responsivas.',
+    type: 'proyecto',
+    url: 'https://tusitio2.netlify.app',
+    tags: ['React', 'UI', 'Responsive']
   }
+  // Añade aquí tus demás tareas…
 ];
