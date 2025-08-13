@@ -13,7 +13,7 @@ const PortfolioPage: React.FC = () => {
       {/* HERO */}
       <header className="hero-wrap">
         <div className="container position-relative">
-          {/* Si tienes Navbar propio, puedes quitar este nav inline */}
+      
           <nav className="d-flex justify-content-end gap-3 py-3 small text-uppercase nav-links">
             <a href="#proyectos">Proyectos</a>
             <a href="#investigacion">Investigación</a>
@@ -22,7 +22,6 @@ const PortfolioPage: React.FC = () => {
 
           <div className="row align-items-center hero-content">
             <div className="col-12 col-lg-7">
-              <p className="brand">Folio<span className="brand-x">x</span></p>
               <h1 className="display-4 fw-bold mb-1">
                 Guillermo <span className="txt-gradient">Gomez</span>
               </h1>
