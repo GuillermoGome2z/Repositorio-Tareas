@@ -5,7 +5,7 @@ export interface Task {
   title: string;
   description?: string;
   type: TaskType;
-  url?: string;       // para Netlify
+  url?: string;      
   tags?: string[];
 }
 
@@ -22,7 +22,7 @@ export const tasks: Task[] = [
     title: 'Formulario en React + TS',
     description: 'Formulario con validaciones y exportación a Excel.',
     type: 'proyecto',
-    url: 'https://tusitio1.netlify.app',
+    url: 'https://funny-smakager-925a6e.netlify.app/',
     tags: ['React', 'TypeScript', 'Bootstrap']
   },
   {
@@ -30,8 +30,17 @@ export const tasks: Task[] = [
     title: 'CV/Portfolio (dark theme)',
     description: 'Hoja de vida con tarjetas y secciones responsivas.',
     type: 'proyecto',
-    url: 'https://tusitio2.netlify.app',
+    url: 'https://cv-guillermogomez.netlify.app/',
     tags: ['React', 'UI', 'Responsive']
+  },
+  
+   {
+    id: 'diseno-responsivo-01',
+    title: 'Diseño Responsivo en React',
+    description: 'Sitio con maquetación responsive (grid/flex) y buenas prácticas.',
+    type: 'proyecto',
+    url: 'https://diseno-responsivo-guillermo-react.netlify.app/',
+    tags: ['React', 'Responsive', 'CSS', 'Grid/Flex']
   }
-  // Añade aquí tus demás tareas…
+
 ];
