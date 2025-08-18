@@ -2,7 +2,7 @@ import React from 'react';
 import type { Task } from '../data/tasks';
 
 interface Props {
-  tasks: Task[]; // Filtradas a type === 'investigacion'
+  tasks: Task[]; 
 }
 const ResearchSection: React.FC<Props> = ({ tasks }) => {
   if (tasks.length === 0) return null;
@@ -12,7 +12,7 @@ const ResearchSection: React.FC<Props> = ({ tasks }) => {
       <div className="row justify-content-center">
         <div className="col-12 col-lg-10">
           <h2 className="section-title text-center" id="investigacion-title">
-            Investigación (Texto Plano)
+            Investigación
           </h2>
 
           {tasks.map((t) => (

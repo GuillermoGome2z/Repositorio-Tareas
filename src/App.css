@@ -6,6 +6,8 @@
   --primary:#4f8cff;     /* azul neón suave */
   --accent:#7b4dff;      /* púrpura */
   --ring: rgba(79,140,255,.45);
+  --title:#f3f6ff;       /* NUEVO: títulos muy claros */
+  --subtitle:#cdd6eb;    /* NUEVO: texto secundario claro */
 }
 
 html, body, #root { height: 100%; background: radial-gradient(1200px 600px at 80% -10%, #1b1f39 0%, #0b0f1a 60%); }
@@ -14,7 +16,7 @@ body { color: var(--text); }
 a { color: var(--text); text-decoration: none; }
 a:hover { color: var(--primary); }
 
-.nav-links a{ opacity:.8; }
+.nav-links a{ opacity:.9; } /* NUEVO: un poco más visible */
 .nav-links a:hover{ opacity:1; text-shadow:0 0 6px var(--primary); }
 
 .hero-wrap{
@@ -42,6 +44,7 @@ a:hover { color: var(--primary); }
   font-weight: 700;
   letter-spacing: .02em;
   margin-bottom: 28px;
+  color: var(--title); /* NUEVO: título de sección más claro */
 }
 
 .card-glow{
@@ -49,10 +52,26 @@ a:hover { color: var(--primary); }
   border: 1px solid rgba(255,255,255,.06);
   border-radius: 20px;
   box-shadow: 0 10px 30px rgba(0,0,0,.35), inset 0 0 0 1px rgba(255,255,255,.03);
+
+  /* NUEVO: forzar variables internas de Bootstrap para títulos/texto de la card */
+  --bs-card-title-color: var(--title);
+  --bs-card-color: var(--text);
 }
 .icon-badge{
   width: 44px; height: 44px; border-radius: 12px; background: rgba(79,140,255,.15);
   box-shadow: 0 0 0 4px rgba(79,140,255,.08);
+}
+
+/* NUEVO: más contraste en el header y body de la card */
+.card-glow .card-title{
+  color: var(--title) !important;
+  font-weight: 700;
+  letter-spacing: .2px;
+  text-shadow: 0 0 10px rgba(79,140,255,.12);
+}
+.card-glow .card-text,
+.card-glow .text-secondary{
+  color: var(--subtitle) !important;
 }
 
 .btn-neon{
