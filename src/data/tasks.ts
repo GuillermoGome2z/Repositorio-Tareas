@@ -1,8 +1,5 @@
 export type TaskType = 'investigacion' | 'proyecto';
-
-import type { GlossaryEntry } from './glossary.types';
-import { glossaryGlosario } from './glossary_glosario';
-
+import { glossaryFormularios } from './glossary_formularios';
 import type { GlossaryEntry } from './glossary.types';
 import { glossaryGlosario } from './glossary_glosario';
 
@@ -17,7 +14,7 @@ export interface Task {
   content?: string;
 }
 
-// …
+// Lista de tareas del portafolio
 export const tasks: Task[] = [
   {
     id: 'glosario-01',
@@ -26,6 +23,15 @@ export const tasks: Task[] = [
     type: 'investigacion',
     entries: glossaryGlosario, 
   },
+
+ {
+    id: 'glosario-forms-01',                 // 👈 NUEVO ITEM
+    title: 'Elementos de Formularios HTML + CSS',
+    description: 'Inputs, textarea, select, CSS (media queries) y frameworks.',
+    type: 'investigacion',
+    entries: glossaryFormularios
+  },
+
   {
     id: 'form-react-01',
     title: 'Formulario en React + TS',
