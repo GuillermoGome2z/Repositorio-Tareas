@@ -1,69 +1,49 @@
-# React + TypeScript + Vite
+# Portafolio de Tareas — React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Portafolio moderno para listar mis **tareas/proyectos** (con cards y botón a Netlify) y una sección de **Investigación** con glosario **filtrable** y **orden alfabético**.
 
-Currently, two official plugins are available:
+> Stack: React + TypeScript + Vite + Bootstrap 5. Estilos propios en `App.css`.  
+> Demo (Netlify): _(agrega tu URL si tienes deploy)_
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+![preview](public/preview.png)
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## ✨ Características
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- **Hero** con nombre, CTA y avatar circular (puede mostrar mi foto).
+- **Grilla de cards** para proyectos “publicados” (tags y botón _Ver en Netlify_).
+- **Investigación**:
+  - Glosario con **buscador** (por término y por definición).
+  - **Orden A–Z** (incluye grupo **0–9**) y grupos **colapsables**.
+  - **Pestañas** si hay varias investigaciones (ej.: Glosario general y Formularios).
+- **Diseño responsive** (Bootstrap + CSS).
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+---
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 🧰 Tecnologías
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- Vite + React + TypeScript  
+- Bootstrap 5  
+- react-icons (íconos en las cards)  
+- Estilos personalizados en `src/App.css`
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+---
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 🚀 Puesta en marcha
+
+```bash
+# instalar dependencias
+npm install
+
+# (si faltan iconos)
+npm i react-icons
+
+# entorno de desarrollo
+npm run dev
+
+# build de producción
+npm run build
+
+# previsualizar el build
+npm run preview
