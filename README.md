@@ -47,3 +47,25 @@ npm run build
 
 # previsualizar el build
 npm run preview
+```
+## 🗂️ Estructura
+```text
+src/
+  assets/                         # imágenes (foto de perfil, etc.)
+  components/
+    Glossary.tsx                  # glosario con filtro + A–Z (+ 0–9)
+    ResearchSection.tsx           # sección Investigación (tabs + contenido)
+    TaskCard.tsx                  # tarjeta de proyecto (tags + botón Netlify + icono)
+    Navbar.tsx                    # (opcional) navegación superior
+  data/
+    tasks.ts                      # lista de tareas (proyectos e investigaciones)
+    glossary.types.ts             # tipos del glosario
+    glossary_glosario.ts          # glosario #1 (Sistemas)
+    glossary_formularios.ts       # glosario #2 (Formularios/CSS)
+  pages/
+    PortfolioPage.tsx             # página principal (hero + grilla + investigación)
+  App.tsx
+  App.css                         # tema y estilos del sitio
+  main.tsx                        # entrada de React
+index.html                        # <div id="root"></div> + script de Vite
+
