@@ -2,7 +2,7 @@ import { tasks } from '../data/tasks';
 import type { Task } from '../data/tasks';  
 
 export default function Investigaciones() {
-  // tipa el filtro para evitar "implicit any"
+
   const items: Task[] = tasks.filter((t: Task) => t.type === 'investigacion');
 
   return (
