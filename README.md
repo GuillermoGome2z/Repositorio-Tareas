@@ -41,6 +41,7 @@ npm run build
 
 # previsualizar el build local
 npm run preview
+```
 
 
 ## 🧰 Tecnologías
