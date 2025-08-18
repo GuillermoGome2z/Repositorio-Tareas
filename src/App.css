@@ -95,3 +95,47 @@ a:hover { color: var(--primary); }
   font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
   color: var(--muted);
 }
+
+/* Ícono dentro de la card (badge) */
+.icon-badge{
+  width: 48px; height: 48px; border-radius: 12px;
+  background: rgba(79,140,255,.15);
+  box-shadow: 0 0 0 4px rgba(79,140,255,.08);
+}
+.icon-filled{
+  display:grid; place-items:center;
+  font-size:22px; color:#eaf1ff;
+  text-shadow: 0 4px 16px rgba(0,0,0,.35);
+}
+@media (min-width: 992px){
+  .icon-badge{ width:56px; height:56px; }
+  .icon-filled{ font-size:26px; }
+}
+
+/* ====== GLOSARIO ====== */
+.glossary-toolbar{
+  position: sticky; top: 0; z-index: 1;
+  background: linear-gradient(180deg, rgba(11,15,26,.85), rgba(11,15,26,0));
+  padding-bottom: 8px; backdrop-filter: blur(4px);
+}
+.letters{ display:flex; flex-wrap:wrap; gap:8px; }
+.letter-pill{
+  border:1px solid rgba(255,255,255,.12);
+  background: rgba(79,140,255,.10);
+  padding:6px 10px; border-radius: 999px; font-size: .9rem;
+  color:#eaf1ff;
+}
+.letter-pill.active{ background: rgba(79,140,255,.25); }
+
+.glossary-letter{
+  cursor: pointer;
+  font-weight: 700; letter-spacing:.02em; padding: 8px 0;
+}
+.glossary-letter .count{
+  font-weight: 600; margin-left: 6px; opacity: .7;
+}
+
+.glossary-ul{ list-style:none; padding-left:0; margin: 8px 0 16px; }
+.gloss-row{ display:flex; gap:10px; margin: 8px 0; line-height: 1.45; }
+.gloss-row .term{ min-width: 180px; color: var(--title); }
+.gloss-row .def{ color: var(--subtitle); }

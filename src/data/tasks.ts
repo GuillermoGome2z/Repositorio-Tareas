@@ -1,21 +1,30 @@
 export type TaskType = 'investigacion' | 'proyecto';
 
+import type { GlossaryEntry } from './glossary.types';
+import { glossaryGlosario } from './glossary_glosario';
+
+import type { GlossaryEntry } from './glossary.types';
+import { glossaryGlosario } from './glossary_glosario';
+
 export interface Task {
   id: string;
   title: string;
   description?: string;
-  type: TaskType;
-  url?: string;      
+  type: 'investigacion' | 'proyecto';
+  url?: string;
   tags?: string[];
+  entries?: GlossaryEntry[];   
+  content?: string;
 }
 
+// …
 export const tasks: Task[] = [
   {
     id: 'glosario-01',
     title: 'Glosario de términos (Sistemas)',
-    description:
-      'Definiciones clave: algoritmo, compilador, framework, API, endpoint, ORM, REST, CRUD, etc.',
-    type: 'investigacion'
+    description: 'Definiciones clave del curso.',
+    type: 'investigacion',
+    entries: glossaryGlosario, 
   },
   {
     id: 'form-react-01',
@@ -33,8 +42,7 @@ export const tasks: Task[] = [
     url: 'https://cv-guillermogomez.netlify.app/',
     tags: ['React', 'UI', 'Responsive']
   },
-  
-   {
+  {
     id: 'diseno-responsivo-01',
     title: 'Diseño Responsivo en React',
     description: 'Sitio con maquetación responsive (grid/flex) y buenas prácticas.',
@@ -42,5 +50,5 @@ export const tasks: Task[] = [
     url: 'https://diseno-responsivo-guillermo-react.netlify.app/',
     tags: ['React', 'Responsive', 'CSS', 'Grid/Flex']
   }
-
+  // Si creas otra investigación, agrega otro objeto con type:'investigacion' y entries: [...]
 ];
