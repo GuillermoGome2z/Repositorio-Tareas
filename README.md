@@ -52,24 +52,6 @@ npm run preview
 
 ---
 
-## 🚀 Puesta en marcha
-
-```bash
-# instalar dependencias
-npm install
-
-# (si faltan iconos)
-npm i react-icons
-
-# entorno de desarrollo
-npm run dev
-
-# build de producción
-npm run build
-
-# previsualizar el build
-npm run preview
-```
 ## 🗂️ Estructura
 ```text
 src/
