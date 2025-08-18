@@ -1,25 +1,47 @@
 # Portafolio de Tareas — React + TypeScript + Vite
 
-Portafolio moderno para listar mis **tareas/proyectos** (con cards y botón a Netlify) y una sección de **Investigación** con glosario **filtrable** y **orden alfabético**.
+Portafolio moderno para mostrar **proyectos** (cards con tags e íconos) y una sección de **Investigación** con glosario **filtrable**, ordenado **A–Z** (incluye **0–9**) y con **pestañas** si agregas varias investigaciones.
 
-> Stack: React + TypeScript + Vite + Bootstrap 5. Estilos propios en `App.css`.  
-> Demo (Netlify): _(agrega tu URL si tienes deploy)_
-
-![preview](public/preview.png)
+> Stack: React + TypeScript + Vite + Bootstrap 5 + react-icons  
+> Estilos principales en `src/App.css`.
 
 ---
 
-## ✨ Características
+## ✨ Qué incluye
 
-- **Hero** con nombre, CTA y avatar circular (puede mostrar mi foto).
-- **Grilla de cards** para proyectos “publicados” (tags y botón _Ver en Netlify_).
+- **Hero** con tu nombre, botón (CTA) y avatar circular (admite foto real).
+- **Grilla de cards** para proyectos:
+  - título, descripción, _tags_, ícono según stack.
+  - botón “**Ver demo**” (si proporcionas `url` en los datos).
 - **Investigación**:
-  - Glosario con **buscador** (por término y por definición).
-  - **Orden A–Z** (incluye grupo **0–9**) y grupos **colapsables**.
-  - **Pestañas** si hay varias investigaciones (ej.: Glosario general y Formularios).
-- **Diseño responsive** (Bootstrap + CSS).
+  - **Buscador** por término y por definición (normaliza acentos).
+  - **Orden alfabético** y grupos **colapsables** por letra.
+  - Botón **0–9** para términos que empiezan con números.
+  - **Pestañas** cuando hay 2+ investigaciones.
+- **UI oscura**, con sombras “glow” y diseño **responsive**.
 
 ---
+
+## 🧰 Requisitos & Scripts
+
+**Requisitos:** Node 18+ recomendado.
+
+```bash
+# instalar dependencias
+npm install
+
+# (si faltan iconos)
+npm i react-icons
+
+# entorno de desarrollo
+npm run dev
+
+# build de producción
+npm run build
+
+# previsualizar el build local
+npm run preview
+
 
 ## 🧰 Tecnologías
 
