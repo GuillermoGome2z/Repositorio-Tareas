@@ -2,6 +2,7 @@ export type TaskType = 'investigacion' | 'proyecto';
 import { glossaryFormularios } from './glossary_formularios';
 import type { GlossaryEntry } from './glossary.types';
 import { glossaryGlosario } from './glossary_glosario';
+import { glossaryHooks } from './glossary_hooks';
 
 export interface Task {
   id: string;
@@ -19,12 +20,14 @@ export interface Task {
 
 // Lista de tareas del portafolio
 export const tasks: Task[] = [
+  
   {
     id: 'glosario-01',
     title: 'Glosario de términos (Sistemas)',
     description: 'Definiciones clave del curso.',
     type: 'investigacion',
-    entries: glossaryGlosario,
+    entries: glossaryGlosario, 
+     
   },
   {
     id: 'glosario-forms-01',
@@ -33,6 +36,17 @@ export const tasks: Task[] = [
     type: 'investigacion',
     entries: glossaryFormularios,
   },
+
+  {
+    id: 'hooks-react-01',
+    title: 'Hooks en React',
+    description:
+      'useState, useEffect, useMemo, useRef, useContext, useReducer y useCallback.',
+    type: 'investigacion',
+    entries: glossaryHooks,
+    tags: ['React', 'Hooks'],
+  },
+
   {
     id: 'form-react-01',
     title: 'Formulario en React + TS',
