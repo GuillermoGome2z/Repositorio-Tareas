@@ -29,6 +29,8 @@ export const tasks: Task[] = [
     entries: glossaryGlosario, 
      
   },
+
+  
   {
     id: 'glosario-forms-01',
     title: 'Elementos de Formularios HTML + CSS',

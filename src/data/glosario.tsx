@@ -7,8 +7,7 @@ export interface Task {
   type: TaskType;
   url?: string;
   tags?: string[];
-  content?: string;  
-       
+  content?: string;     
 }
 
 
