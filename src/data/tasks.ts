@@ -51,7 +51,7 @@ export const tasks: Task[] = [
     type: 'proyecto',
     url: 'https://cv-guillermogomez.netlify.app/',
     githubUrl: 'https://github.com/GuillermoGome2z/hoja-de-vida',
-    imageSrc: '/imagenes/IMGCV.png',
+    imageSrc: '/IMGCV.png',
     imageAlt: 'Vista previa del portafolio dark theme',
     tags: ['React', 'UI', 'Responsive'],
   },
