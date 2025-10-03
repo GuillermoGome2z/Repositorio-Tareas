@@ -16,7 +16,6 @@ const PortfolioPage: React.FC = () => {
           <nav className="d-flex justify-content-end gap-3 py-3 small text-uppercase nav-links">
             <a href="#proyectos">Proyectos</a>
             <a href="#investigacion">Investigación</a>
-            <a href="#contacto">Contacto</a>
           </nav>
 
           <div className="row align-items-center hero-content">
