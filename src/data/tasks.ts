@@ -8,9 +8,12 @@ export interface Task {
   title: string;
   description?: string;
   type: 'investigacion' | 'proyecto';
-  url?: string;
+  url?: string;                 // demo (Netlify/Vercel)
+  githubUrl?: string;           // nuevo: repositorio
+  imageSrc?: string;            // nuevo: captura/preview
+  imageAlt?: string;            // nuevo: texto alternativo
   tags?: string[];
-  entries?: GlossaryEntry[];   
+  entries?: GlossaryEntry[];
   content?: string;
 }
 
@@ -21,32 +24,36 @@ export const tasks: Task[] = [
     title: 'Glosario de términos (Sistemas)',
     description: 'Definiciones clave del curso.',
     type: 'investigacion',
-    entries: glossaryGlosario, 
+    entries: glossaryGlosario,
   },
-
- {
-    id: 'glosario-forms-01',                 // 👈 NUEVO ITEM
+  {
+    id: 'glosario-forms-01',
     title: 'Elementos de Formularios HTML + CSS',
     description: 'Inputs, textarea, select, CSS (media queries) y frameworks.',
     type: 'investigacion',
-    entries: glossaryFormularios
+    entries: glossaryFormularios,
   },
-
   {
     id: 'form-react-01',
     title: 'Formulario en React + TS',
     description: 'Formulario con validaciones y exportación a Excel.',
     type: 'proyecto',
     url: 'https://funny-smakager-925a6e.netlify.app/',
-    tags: ['React', 'TypeScript', 'Bootstrap']
+    githubUrl: 'https://github.com/GuillermoGome2z/Formulario-',
+    imageSrc: '/images/form-react-ts.png',
+    imageAlt: 'Captura del formulario React + TS',
+    tags: ['React', 'TypeScript', 'Bootstrap'],
   },
   {
     id: 'cv-portfolio-01',
-    title: 'CV/Portfolio (dark theme)',
+    title: 'CV/Portfolio',
     description: 'Hoja de vida con tarjetas y secciones responsivas.',
     type: 'proyecto',
     url: 'https://cv-guillermogomez.netlify.app/',
-    tags: ['React', 'UI', 'Responsive']
+    githubUrl: 'https://github.com/GuillermoGome2z/hoja-de-vida',
+    imageSrc: '/imagenes/IMGCV.png',
+    imageAlt: 'Vista previa del portafolio dark theme',
+    tags: ['React', 'UI', 'Responsive'],
   },
   {
     id: 'diseno-responsivo-01',
@@ -54,7 +61,9 @@ export const tasks: Task[] = [
     description: 'Sitio con maquetación responsive (grid/flex) y buenas prácticas.',
     type: 'proyecto',
     url: 'https://diseno-responsivo-guillermo-react.netlify.app/',
-    tags: ['React', 'Responsive', 'CSS', 'Grid/Flex']
-  }
-  // Si creas otra investigación, agrega otro objeto con type:'investigacion' y entries: [...]
+    githubUrl: 'https://github.com/GuillermoGome2z/Responsivo-React',
+    imageSrc: '/images/react-responsive.png',
+    imageAlt: 'Captura del diseño responsive en React',
+    tags: ['React', 'Responsive', 'CSS', 'Grid/Flex'],
+  },
 ];
