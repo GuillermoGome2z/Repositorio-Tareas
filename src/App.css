@@ -39,6 +39,15 @@ a:hover { color: var(--primary); }
   box-shadow: 0 0 0 10px rgba(79,140,255,.15), 0 20px 60px rgba(0,0,0,.45);
 }
 
+.avatar-img {
+  width: 260px;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 6px solid rgba(255,255,255,0.06);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.35);
+}
+
 .section-gap{ padding: 72px 0; }
 .section-title{
   font-weight: 700;

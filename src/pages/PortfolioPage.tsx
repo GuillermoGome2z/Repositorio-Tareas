@@ -30,7 +30,13 @@ const PortfolioPage: React.FC = () => {
             </div>
 
             <div className="col-12 col-lg-5 text-center mt-5 mt-lg-0">
-              <div className="avatar-circle" aria-hidden />
+              <img
+                src="/ImagenPerfil.jpg"
+                alt="Foto de perfil de Guillermo"
+                className="avatar-img"
+                width={260}
+                height={260}
+              />
             </div>
           </div>
         </div>
